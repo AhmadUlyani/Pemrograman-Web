@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pendaftaran Kursus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ccc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 600px;
+            height: 600px;
+            margin: 50px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            background-color: #7fd1f5;
+            color: red;
+            text-align: center;
+            margin: 0;
+            padding: 15px 0;
+            font-size: 24px;
+        }
+
+        form {
+            background-color: #555;
+            padding: 5px;
+        }
+
+        fieldset {
+            border: none;
+            color: black;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+            margin-bottom: 8px;
+            color: black;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select {
+            width: 200px;
+            padding: 4px;
+            margin-bottom: 10px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin-left: 125px;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .komentar {
+            background-color: #f88;
+            color: black;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .komentar label {
+            width: auto;
+            color: black;
+        }
+
+        textarea {
+            width: 100%;
+            height: 60px;
+            margin-top: 5px;
+        }
+
+        .buttons {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .buttons input {
+            padding: 5px 15px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Pendaftaran Kursus</h1>
+    <form>
+        <fieldset>
+            <legend>Data Diri</legend>
+            
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama"><br>
+
+            <label for="nim">NIM</label>
+            <input type="text" id="nim" name="nim"><br>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="tgl">Tanggal Lahir</label>
+            <input type="date" id="tgl" name="tgl"><br>
+
+            <label>Jenis Kelamin</label>
+            <div class="radio-group">
+                <input type="radio" id="laki" name="gender" value="Laki-laki">
+                <label for="laki">Laki-laki</label><br>
+                <input type="radio" id="perempuan" name="gender" value="Perempuan">
+                <label for="perempuan">Perempuan</label>
+            </div>
+
+            <label>Pilih Program Kursus</label>
+            <div class="checkbox-group">
+                <input type="checkbox" name="program" value="C#"> C#<br>
+                <input type="checkbox" name="program" value="Java"> Java<br>
+                <input type="checkbox" name="program" value="SQL"> SQL<br>
+                <input type="checkbox" name="program" value="HTML dan PHP"> HTML dan PHP
+            </div>
+
+            <label for="jadwal">Pilihan Hari/Jam Kursus</label>
+            <select id="jadwal" name="jadwal">
+                <option value="Senin - Rabu/09.00 - 11.00">Senin - Rabu/09.00 - 11.00</option>
+                <option value="Senin - Rabu/13.00 - 15.00">Senin - Rabu/13.00 - 15.00</option>
+                <option value="Jumat - Sabtu/09.00 - 11.00">Jumat - Sabtu/09.00 - 11.00</option>
+            </select>
+        </fieldset>
+
+        <div class="komentar">
+            <label for="komentar">Komentar Anda</label>
+            <textarea id="komentar" name="komentar"></textarea>
+
+            <div class="buttons">
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+                <input type="button" value="Cancel">
+            </div>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
